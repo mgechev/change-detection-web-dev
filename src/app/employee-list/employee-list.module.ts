@@ -8,6 +8,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 
 import { EmployeeListComponent } from './employee-list.component';
+import { CalculatePipe } from './calculate.pipe';
 
 @NgModule({
   imports: [
@@ -20,7 +21,7 @@ import { EmployeeListComponent } from './employee-list.component';
     MatCommonModule,
     MatChipsModule
   ],
-  declarations: [EmployeeListComponent],
+  declarations: [EmployeeListComponent, CalculatePipe],
   exports: [
     EmployeeListComponent,
     MatInputModule,
