@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
 import { EmployeeData } from './../tree-generator.service';
 
@@ -34,6 +34,7 @@ const fibonacci = (num: number): number => {
       <mat-divider *ngIf="data.length !== 0"></mat-divider>
     </mat-list>
   `,
+  changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['employee-list.component.css']
 })
 export class EmployeeListComponent {
