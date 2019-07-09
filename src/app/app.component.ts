@@ -31,8 +31,8 @@ export class AppComponent implements OnInit {
   constructor(private generator: ListGenerator) {}
 
   ngOnInit() {
-    this.salesList = this.generator.generate(Names, NumRange, 10);
-    this.rndList = this.generator.generate(Names, NumRange, 10);
+    this.salesList = this.generator.generate(Names, NumRange, 100);
+    this.rndList = this.generator.generate(Names, NumRange, 100);
   }
 
   add(list: EmployeeData[], name: string) {
