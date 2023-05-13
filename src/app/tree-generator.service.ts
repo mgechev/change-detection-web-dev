@@ -1,8 +1,10 @@
+import { Injectable } from "@angular/core";
 export interface EmployeeData {
   label: string;
   num: number;
 }
 
+@Injectable()
 export class ListGenerator {
   generate(labels: string[], numRange: [number, number], width: number): EmployeeData[] {
     const result: EmployeeData[] = [];
