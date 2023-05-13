@@ -8,17 +8,17 @@ import { MatChipsModule } from '@angular/material/chips';
 import { EmployeeListComponent } from './employee-list.component';
 
 @NgModule({
-  imports: [
-    CommonModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatInputModule,
-    MatListModule,
-    MatChipsModule,
-  ],
-  declarations: [EmployeeListComponent],
-  exports: [
-    EmployeeListComponent
-  ]
+    imports: [
+        CommonModule,
+        FormsModule,
+        BrowserAnimationsModule,
+        MatInputModule,
+        MatListModule,
+        MatChipsModule,
+        EmployeeListComponent
+    ],
+    exports: [
+        EmployeeListComponent
+    ]
 })
 export class EmployeeListModule {}
