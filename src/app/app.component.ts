@@ -21,7 +21,7 @@ const NumRange: [number, number] = [23, 28];
       (remove)="remove(rndList, $event)"
     ></app-employee-list>
   `,
-  styleUrls: ['app.component.css']
+  styleUrls: ['app.component.scss']
 })
 export class AppComponent implements OnInit {
   salesList: EmployeeData[];

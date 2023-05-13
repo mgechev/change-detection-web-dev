@@ -34,7 +34,7 @@ const fibonacci = (num: number): number => {
       <mat-divider *ngIf="data.length !== 0"></mat-divider>
     </mat-list>
   `,
-  styleUrls: ['employee-list.component.css']
+  styleUrls: ['employee-list.component.scss']
 })
 export class EmployeeListComponent {
   @Input() data: EmployeeData[];
