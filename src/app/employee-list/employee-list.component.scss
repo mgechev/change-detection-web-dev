@@ -38,8 +38,8 @@ mat-form-field {
 }
 
 /* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
-mat-chip-list {
-  margin-right: 15px;
+mat-chip-listbox {
+  margin-left: 15px;
 }
 
 .chip {
