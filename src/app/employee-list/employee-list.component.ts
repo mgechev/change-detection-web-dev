@@ -24,11 +24,11 @@ const fibonacci = (num: number): number => {
         <h3 matLine title="Name">
           {{ item.label }}
         </h3>
-        <mat-chip-list>
+        <mat-chip-listbox>
           <div class="chip">
             {{ calculate(item.num) }}
           </div>
-        </mat-chip-list>
+        </mat-chip-listbox>
         <i title="Delete" class="fa fa-trash-o" aria-hidden="true" (click)="remove.emit(item)"></i>
       </mat-list-item>
       <mat-divider *ngIf="data.length !== 0"></mat-divider>
