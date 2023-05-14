@@ -1,6 +1,13 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 import { EmployeeData } from './../tree-generator.service';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatChipsModule } from '@angular/material/chips';
+import { NgIf, NgFor } from '@angular/common';
+import { MatListModule } from '@angular/material/list';
+import { FormsModule } from '@angular/forms';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 const fibonacci = (num: number): number => {
   if (num === 1 || num === 2) {
@@ -10,8 +17,8 @@ const fibonacci = (num: number): number => {
 };
 
 @Component({
-  selector: 'app-employee-list',
-  template: `
+    selector: 'app-employee-list',
+    template: `
     <h1 title="Department">{{ department }}</h1>
 
     <mat-form-field>
@@ -24,17 +31,19 @@ const fibonacci = (num: number): number => {
         <h3 matLine title="Name">
           {{ item.label }}
         </h3>
-        <mat-chip-list>
+        <mat-chip-listbox>
           <div class="chip">
             {{ calculate(item.num) }}
           </div>
-        </mat-chip-list>
+        </mat-chip-listbox>
         <i title="Delete" class="fa fa-trash-o" aria-hidden="true" (click)="remove.emit(item)"></i>
       </mat-list-item>
       <mat-divider *ngIf="data.length !== 0"></mat-divider>
     </mat-list>
   `,
-  styleUrls: ['employee-list.component.css']
+    styleUrls: ['employee-list.component.scss'],
+    standalone: true,
+    imports: [MatFormFieldModule, MatInputModule, FormsModule, MatListModule, NgIf, NgFor, MatChipsModule, MatDividerModule]
 })
 export class EmployeeListComponent {
   @Input() data: EmployeeData[];

@@ -1,6 +1,8 @@
 import { ListGenerator, EmployeeData } from './tree-generator.service';
 import { Component, OnInit } from '@angular/core';
 import { Names } from './names';
+import { EmployeeListComponent } from './employee-list/employee-list.component';
+import { CommonModule } from '@angular/common';
 
 const NumRange: [number, number] = [23, 28];
 
@@ -21,7 +23,10 @@ const NumRange: [number, number] = [23, 28];
       (remove)="remove(rndList, $event)"
     ></app-employee-list>
   `,
-  styleUrls: ['app.component.css']
+  styleUrls: ['app.component.scss'],
+  standalone: true,
+  imports: [CommonModule, EmployeeListComponent],
+  providers: [ListGenerator],
 })
 export class AppComponent implements OnInit {
   salesList: EmployeeData[];
